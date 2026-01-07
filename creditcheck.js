@@ -665,7 +665,7 @@ const CREDIT_DATA = {
 // ---------------------------------------------------
 
 router.get("/credit-check", (req, res) => {
-  const {bsn} = req.body;
+  const {bsn} = req.query;
 
   if (!bsn || typeof bsn !== "string") {
     return res.status(400).json({
